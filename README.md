@@ -28,7 +28,7 @@
  - 9. 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안되는 에러 <br>
  - 10. TextView의 Text가 마음대로 단어가 바뀌는 에러. <br>
  
-[V. 아쉽거나 해결하지 못한 부분](#v-아쉽거나-해결하지-못한-부분)<br>
+[V. 아쉽거나 해결하지 못한 부분](#v.아쉽거나-해결하지-못한-부분)<br>
 [VI. 관련 학습 내용](#vi-관련-학습-내용)<br>
 
 <br><br> 
@@ -837,7 +837,7 @@ present(alertController, animated: true, completion: nil)
 ---
 <br><br><br>
 
-## V. 아쉽거나 해결 못한 부분
+## V.아쉽거나 해결하지 못한 부분
 ### NSFetchedResultsController Delegate는 누가 위임받아 처리할까?
 
 1. Diffable DataSource 
