@@ -388,7 +388,7 @@ static func generateAlertController(title: String?, message: String?, style: UIA
  - [2. 테이블뷰의 Separator가 왼쪽에 끊어져 있는 에러](#테이블뷰의-Separator가-왼쪽에-끊어져-있는-에러)<br>
  - [3. DateFormatter locale이 제대로 적용이 안되는 문제](#DateFormatter-locale이-제대로-적용이-안되는-문제)<br>
  - [4. TextView의 스크롤의 시작부분이 제일 상단이 아닌, 중간쯤에 위치하는 에러](#TextView의-스크롤의-시작부분이-제일-상단이-아닌,-중간쯤에-위치하는-에러) <br>
- - [5. TableView의 오토레이아웃을 주지않았는데 왜 자동으로 적용이 될까?](#TableView의-오토레이아웃을-주지않았는데-왜-자동으로-적용이-될까?)<br>
+ - [5. TableView의 오토레이아웃을 주지않았는데 왜 자동으로 적용이 될까?](#TableView의-오토레이아웃을-주지않았는데-왜-자동으로-적용이-될까)<br>
  - [6. 오토레이아웃 경고가 계속 뜨는 에러](#오토레이아웃-경고가-계속-뜨는-에러)<br>
  - [7. Split View에서 Secondary View가 계속 push 되는 에러](#Split-View에서-Secondary-View가-계속-push-되는-에러) <br>
  - [8. 테이블 뷰에서 스와이프가 작동이 안되는 에러](#테이블-뷰에서-스와이프가-작동이-안되는-에러) <br>
