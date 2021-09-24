@@ -390,7 +390,7 @@ static func generateAlertController(title: String?, message: String?, style: UIA
  - [4. TextView의 스크롤의 시작부분이 제일 상단이 아닌, 중간쯤에 위치하는 에러](#TextView의-스크롤의-시작부분이-제일-상단이-아닌,-중간쯤에-위치하는-에러) <br>
  - [5. TableView의 오토레이아웃을 주지않았는데 왜 자동으로 적용이 될까?](#TableView의-오토레이아웃을-주지않았는데-왜-자동으로-적용이-될까?)<br>
  - [6. 오토레이아웃 경고가 계속 뜨는 에러](#오토레이아웃-경고가-계속-뜨는-에러)<br>
- - [7. Split View에서 Secondary View가 계속 push 되는 에러](#Split-View에서Secondary-View가-계속-push-되는-에러) <br>
+ - [7. Split View에서 Secondary View가 계속 push 되는 에러](#Split-View에서-Secondary-View가-계속-push-되는-에러) <br>
  - [8. 테이블 뷰에서 스와이프가 작동이 안되는 에러](#테이블-뷰에서-스와이프가-작동이-안되는-에러) <br>
  - [9. 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안되는 에러](#메모의-내용-수정시,-메모리스트에-수정된-내역이-반영이-안되는-에러) <br>
  - [10. TextView의 Text가 마음대로 단어가 바뀌는 에러](#TextView의-Text가-마음대로-단어가-바뀌는-에러) <br>
@@ -763,8 +763,6 @@ dataSource = MemoSourceData(tableView: self.tableView, cellProvider: { tableView
 
 
 ### 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안되는 에러
-
-
 #### 원인
 <img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f744ef83-ec87-4dcd-8e61-3ec97569e789/Simulator_Screen_Recording_-_iPhone_12_Pro_Max_-_2021-09-07_at_15.40.32.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T075406Z&X-Amz-Expires=86400&X-Amz-Signature=6aeb92c3bd3f66bca3b61f7896f198c1d4b75a81767d0901d04df431fc95cccc&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Simulator%2520Screen%2520Recording%2520-%2520iPhone%252012%2520Pro%2520Max%2520-%25202021-09-07%2520at%252015.40.32.gif%22">
 
