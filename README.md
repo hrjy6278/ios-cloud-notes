@@ -17,13 +17,17 @@
 [II. 요구 기능](#ii-요구-기능)<br>
 [III. 이를 위한 설계](#iii-이를-위한-설계)<br>
 [IV. 💫Trouble Shooting💫](#iv-trouble-shooting)<br>
- - [1. LazyLoading Probelm](#1-lazyloading-probelm)<br>
- - [2. HTTP Request POST시에 HTTP Message 503Error 가 Response 되는 에러!](#2-http-request-post시에-http-message-503error-가-response-되는-에러)<br>
- - [3. DataSource 와 Delegate가 분리된 상황에서 Model DATA를 여러군데에서 참조 할 수 있는 방법](#3-datasource-와-delegate가-분리된-상황에서-model-data를-여러군데에서-참조-할-수-있는-방법)<br>
- - [4. Delegate타입을 따로 만들고 ViewController에서 할당 하였는데 반영되지 않는 문제](#4-delegate타입을-따로-만들고-viewcontroller에서-할당-하였는데-반영되지-않는-문제)<br>
- - [5. CodingKey 프로토콜을 채택했음에도 채택하지 않았다는 경고 메세지가 나온 문제](#5-codingkey-프로토콜을-채택했음에도-채택하지-않았다는-경고-메세지가-나온-문제)<br>
- - [6. cell의 textLabel에 데이터 및 속성이 제대로 반영되지 않는 문제](#6-cell의-textlabel에-데이터-및-속성이-제대로-반영되지-않는-문제)<br>
-
+ - 1. 테이블뷰에서 뷰들이 한곳에 모여있는 에러 <br>
+ - 2. 테이블뷰의 Separator가 왼쪽에 끊어져 있는 에러<br>
+ - 3. DateFormatter locale이 제대로 적용이 안되는 문제.<br>
+ - 4. TextView의 스크롤의 시작부분이 제일 상단이 아닌, 중간쯤에 위치하는 에러 <br>
+ - 5. TableView의 오토레이아웃을 주지않았는데 왜 자동으로 적용이 될까?<br>
+ - 6. 오토레이아웃 경고가 계속 뜨는 에러<br>
+ - 7. Split View에서 Secondary View가 계속 push 되는 에러 <br>
+ - 8. 테이블 뷰에서 스와이프가 작동이 안되는 에러 <br>
+ - 9. 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안되는 에러 <br>
+ - 10. TextView의 Text가 마음대로 단어가 바뀌는 에러. <br>
+ 
 [V. 아쉽거나 해결하지 못한 부분](#v-아쉽거나-해결하지-못한-부분)<br>
 [VI. 관련 학습 내용](#vi-관련-학습-내용)<br>
 
@@ -380,7 +384,19 @@ static func generateAlertController(title: String?, message: String?, style: UIA
 <br> 
 
 ## IV. Trouble Shooting
-### 뷰들이 한곳에 모여 있는 에러
+ - [1. 테이블뷰에서 뷰들이 한곳에 모여있는 에러](#테이블뷰에서-뷰들이-한곳에-모여있는-에러) <br>
+ - [2. 테이블뷰의 Separator가 왼쪽에 끊어져 있는 에러](#테이블뷰의-Separator가-왼쪽에-끊어져-있는-에러)<br>
+ - [3. DateFormatter locale이 제대로 적용이 안되는 문제](#DateFormatter-locale이-제대로-적용이-안되는-문제)<br>
+ - [4. TextView의 스크롤의 시작부분이 제일 상단이 아닌, 중간쯤에 위치하는 에러](#textView의-스크롤의-시작부분이-제일-상단이-아닌,-중간쯤에-위치하는-에러) <br>
+ - [5. TableView의 오토레이아웃을 주지않았는데 왜 자동으로 적용이 될까?](#TableView의-오토레이아웃을-주지않았는데-왜-자동으로-적용이-될까?)<br>
+ - [6. 오토레이아웃 경고가 계속 뜨는 에러](#오토레이아웃-경고가-계속-뜨는-에러)<br>
+ - [7. Split View에서 Secondary View가 계속 push 되는 에러](#split-View에서Secondary-View가-계속-push-되는-에러) <br>
+ - [8. 테이블 뷰에서 스와이프가 작동이 안되는 에러](#테이블-뷰에서-스와이프가-작동이-안되는-에러) <br>
+ - [9. 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안되는 에러](메모의-내용-수정시,-메모리스트에-수정된-내역이-반영이-안되는-에러) <br>
+ - [10. TextView의 Text가 마음대로 단어가 바뀌는 에러](#textView의-Text가-마음대로-단어가-바뀌는-에러.) <br>
+<br>
+---
+### 테이블뷰에서 뷰들이 한곳에 모여있는 에러
 
 ####  원인
 
@@ -415,7 +431,7 @@ func configureLables() {
 ---
 <br>
 
-### 테이블뷰의 Separator가 왼쪽에 끊어져있음.
+### 테이블뷰의 Separator가 왼쪽에 끊어져 있는 에러
 
 #### 원인
 
@@ -430,33 +446,6 @@ func configureLables() {
 
 ---
 <br>
-
-### 아이폰 가로 모드일때 좌측 여백이 너무 많음
-
-#### 원인
-
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/391eca9b-66d1-426c-a23a-022c580c1fbc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T072622Z&X-Amz-Expires=86400&X-Amz-Signature=752ed4faf557933db0b0d36b17fade7e06b840d2cb3a7a78c2d8f34a1056e464&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
-<br>
-
-<br>
-
-아이패드는 문제 없음.
-
-아이폰 widht - Regular, height - Compact일때 (가로모드일때)
-
-테이블뷰가 저렇게 좌측여백이 너무 많이 생김
-
-height가 Regular 일때는 이렇지않다 어떻게 해야 하지?
-
-#### 해결
-
-`Bottom` 이나 `Top` 에 `View` `SafeArea` 때문에 저렇게 여백이 생김.
-
-리뷰어 비비의 말로는 저게 문제가 되는 거라고 생각하지않는다고 함. 
-
-나도 그렇게 생각하고 넘어 감. 
-
----
 
 ### DateFormatter locale이 제대로 적용이 안되는 문제.
 
@@ -505,7 +494,7 @@ static func localizedString(of lastModifier: Int) -> String {
 
 <br>
 
-### TextView의 스크롤의 시작부분이 제일 상단이 아닌, 중간쯤에 위치함.
+### TextView의 스크롤의 시작부분이 제일 상단이 아닌, 중간쯤에 위치하는 에러
 
 #### 원인
 
@@ -579,19 +568,7 @@ tableview를 상속받아서 그런것인가?
 
 ---
 
-### Git에 Pod 폴더가 올라가 있다. 지양하는방법이라하는데 어떻게 처리하지?
-
-현재 내 Repo Step1에 Pod 폴더가 같이 올라가 있다. 이 방법은 용량도 많이 차지하고,, 지양하는 방법이라고 한다.
-
-근데 이걸 어떻게 해결해야 될 지 모르겠다.............. 새롭게 Repo를 받는다?...
-
-[gitignore.io](https://www.toptal.com/developers/gitignore)
-
-이그노어(올릴파일 제외) 를 언어에 맞는걸 생성해주는 사이트
-
----
-
-### 오토레이아웃 경고가 계속 뜬다.
+### 오토레이아웃 경고가 계속 뜨는 에러
 
 #### 원인
 
@@ -662,7 +639,7 @@ DispatchQueue.global().async {
 
 ---
 
-### Split View에서 Secondary View가 계속 push 되는 문제.
+### Split View에서 Secondary View가 계속 push 되는 에러
 
 #### 원인
 
@@ -734,7 +711,7 @@ extension SplitViewController: MemoListDelegate {
 ---
 <br>
 
-### 스와이프가 작동이 안되는 에러
+### 테이블 뷰에서 스와이프가 작동이 안되는 에러
 
 #### 원인
 테이블 뷰의 스와이프 기능을 통하여 삭제를 구현하려 했음.
@@ -786,7 +763,7 @@ dataSource = MemoSourceData(tableView: self.tableView, cellProvider: { tableView
 <br>
 
 
-### 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안됨.
+### 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안되는 에러
 
 
 #### 원인
@@ -813,7 +790,7 @@ dataSource = MemoSourceData(tableView: self.tableView, cellProvider: { tableView
 --- 
 <br> 
 
-### TextView의 Text가 자기 마음대로 단어가 바뀜.
+### TextView의 Text가 마음대로 단어가 바뀌는 에러
 #### 원인
 텍스트 입력시 앱이 자동으로 단어를 바꾸는 일이 발생함.
 
@@ -831,94 +808,38 @@ autocorrectionType = .no , .yes, .default
 ---
 <br>
 
+### 아이패드에서 얼러트(액션시트형식) 을 띄우려고 하면 에러가남
 
-## UIAlertController에 대한 코드 리팩토링.
+<details>
+<summary>오류 내용</summary>
+Thread 1: "Your application has presented a UIAlertController (<UIAlertController: 0x7f96f1861400>) of style UIAlertControllerStyleActionSheet from CloudNotes.SplitViewController (<CloudNotes.SplitViewController: 0x7f96efc099e0>). The modalPresentationStyle of a UIAlertController with this style is UIModalPresentationPopover. You must provide location information for this popover through the alert controller's popoverPresentationController. `You must provide either a sourceView and sourceRect or a barButtonItem`. If this information is not known when you present the alert controller, you may provide it in the UIPopoverPresentationControllerDelegate method -prepareForPopoverPresentation."
 
-현재 메모앱에서 좌측 상단 네비게이션 버튼을 누르면 액션시트가 띄워져야함.
+</details>
+<br>
 
-그렇기에 해당 기능을 코드를 구현해서 넣었음
+대충 해석하자면, 얼러트 모달스타일은 `UIModalPresentationPopover` 방식인데, 이 방식을 사용할때는 `barButtonItem` 또는 팝업에 대한 위치를(`sourceView`) 설정하라는 이유인 것 같다.
 
-```swift
-static func generateSeeMoreAlertController(deleteHandler: @escaping (UIAlertAction) -> Void,
-                                             shareHandler: @escaping (UIAlertAction) -> Void) -> UIAlertController {
-    let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-    alert.addAction(UIAlertAction(title: NameSpace.delete, style: .destructive, handler: { alert in
-        deleteHandler(alert)
-    }))
-    alert.addAction(UIAlertAction(title: NameSpace.share, style: .default, handler: { alert in
-        shareHandler(alert)
-    }))
-    alert.addAction(UIAlertAction(title: NameSpace.cancel, style: .cancel, handler: nil))
-    
-    return alert
-    }
-```
-
-해당 메서드를 사용하면 `AlertController가` 생성이되어 리턴해주는 느낌임. 
-근데 해당 메서드는 무조건 **공유**, **삭제** 가 필요할때만 사용하는 메서드임. 해당 경우는 언제든지 바뀔수 있다고 판단했음.(나중에 추가해달라고하면 여기에 계속 늘어나거나 삭제 될 것 같기에.) 
-
-그래서 해당 코드를 좀 더 공용적으로 사용 할 순 없을까 고민을 하게되었음..
-
-시도 방향은 
-
- 어떤메소드에 컴플리션 핸들러를 파라미터로 받아, UIAlertAction을 리턴해준다.
-
-해당 얼러트 액션을 메서드의 파라미터로 넣어주게되면 add 하여 uialertcontroller를 리턴하게?
+첫번째 해결 방법 sourceView설정하고(아마 superView 설정하는 느낌처럼) CGrect로 위치를 설정
 
 ```swift
-enum Kind: CustomStringConvertible {
-        case share
-        case delete
-        case cancel
-        
-        var description: String {
-            switch self {
-            case .share:
-                return "Share..."
-            case .delete:
-                return "Delete"
-            case .cancel:
-                return "Cancel"
-            }
-        }
-    }
-  
-static func generateUIAlertAction(kind: Kind, alertStyle: UIAlertAction.Style, completionHandler: ((UIAlertAction) -> Void)?) -> UIAlertAction {
-    return UIAlertAction(title: String(describing: kind), style: alertStyle) {
-        completionHandler?($0)
-    }
-}
+ alert.popoverController?.sourceView = self.view
+ alert.popoverController?.sourceRect = CGRect(x: view.bounds.minX, y: view.bounds.minY, width: 0, height: 0)
 ```
 
-얼러트 액션을 만들어주는 메서드. 메소드를 실행할때 컴플리션핸들러 파라미터로 함수를 받아 UIAlertAction을 생성한 다음 리턴해준다.
+두번째 방법 `barButtonItem` 설정해 주기
 
 ```swift
-enum NameSpace {
-        static let delete = "Delete"
-        static let share = "Share..."
-        static let cancel = "Cancel"
-    }
-
-static func generateAlertController(title: String?, message: String?, style: UIAlertController.Style, alertActions: [UIAlertAction]?) -> UIAlertController {
-    let alert = UIAlertController(title: title, message: message, preferredStyle: style)
-
-    alertActions?.forEach { alertAction in
-        alert.addAction(alertAction)
-    }
-    
-    return alert
-}
+alertController.popoverPresentationController?.barButtonItem = sender
+present(alertController, animated: true, completion: nil)
 ```
 
-얼러트 컨트롤러를 생성하고 리턴해주는 부분.
-
-액션을 배열로 받아 배열에 담긴 액션을 얼러트에 추가해준다. 그런다음 얼러트컨트롤러를 리턴해준다. 
-
-이렇게 사용하면 좀 더 범용성이 좋아 지지 않을까?
+`barButtonItem` 을 눌렀을때 `barButtonItem` 아래에 액션시트가 뜨고 싶다면 위와같이 !   
 
 ---
+<br><br><br>
 
-## NSFetchedResultsController Delegate는 누가 위임받아 처리할까?
+## V. 아쉽거나 해결 못한 부분
+### NSFetchedResultsController Delegate는 누가 위임받아 처리할까?
 
 1. Diffable DataSource 
     - 현재 델리게이트가 구현되있는 곳. `Delegate`가 `snapshot` 을 만들고 `apply`한다는 점에서  데이터소스의 역활이 가장 맞지 않나 라고 생각을 했음.
@@ -931,13 +852,13 @@ static func generateAlertController(title: String?, message: String?, style: UIA
 
 ---
 
+### UITextView가 키보드 아래로 내려갈때 텍스트가 보이지 않는 부분.
+- 해당 부분은 구글검색으로 해결방법은 찾았으나, 이해가 안되는 코드라서 프로젝트에는 적용하지 않았다.
+아직 frame 과 bounds에 대한 이해를 잘 하지 못하여 그런 듯 하니 좀 더 공부를 해봐야겠다.
 
+--- 
 
-
-## 메모를 수정하려고 하면 Layout 에러가 뜸 ㅜㅜ
-
-저번과 비슷한 에러가 뜸.
-
+### 메모를 수정하려고 하면 Layout 에러가 디버그 창에 표시됨
 - 에러
 
     ```swift
@@ -953,164 +874,384 @@ static func generateAlertController(title: String?, message: String?, style: UIA
 
 the table view or one of its superviews has not been added to a window 이 줄이 핵심인 것 같은데,
 
-왜 뜨는거지? TableView는 push 되었지만, 아직 메모리에 안사라져있다. 그러면 VC는 살아있고, 레이아웃도 살아 있는 것 아닌가?
+왜 뜨는거지? TableView는 push 되었지만, 아직 메모리에 안사라져있다. 그러면 VC는 살아있고, 레이아웃도 살아 있는 것 아닌가? 이 부분은 해결 하지 못하였다.
 
 ---
 
-## 아이패드에서 얼러트(액션시트형식) 을 띄우려고 하면 에러가남
+### Git에 Pod 폴더가 올라가 있다. Pod파일을 GitHub에 올리는건 지양하는 방법. 어떻게 처리해야 될까?
 
-> 에러 내용
+현재 내 Repo Step1에 Pod 폴더가 같이 올라가 있다. 이 방법은 용량도 많이 차지하고,, 지양하는 방법이라고 한다.
 
-Thread 1: "Your application has presented a UIAlertController (<UIAlertController: 0x7f96f1861400>) of style UIAlertControllerStyleActionSheet from CloudNotes.SplitViewController (<CloudNotes.SplitViewController: 0x7f96efc099e0>). The modalPresentationStyle of a UIAlertController with this style is UIModalPresentationPopover. You must provide location information for this popover through the alert controller's popoverPresentationController. `You must provide either a sourceView and sourceRect or a barButtonItem`. If this information is not known when you present the alert controller, you may provide it in the UIPopoverPresentationControllerDelegate method -prepareForPopoverPresentation."
+근데 이걸 어떻게 해결해야 될 지 모르겠다.............. 새롭게 Repo를 받는다?. 
 
-대충 해석하자면, 얼러트 모달스타일은 `UIModalPresentationPopover` 방식인데, 이 방식을 사용할때는 `barButtonItem` 또는 팝업에 대한 위치를(`sourceView`) 설정하라는 이유인 것 같음....하아..
+이 부분은 해결하지 못하였다.
 
-첫번째 해결 방법 sourceView설정하고(아마 superView 설정하는 느낌처럼) CGrect로 위치를 설정
+--- 
 
-```swift
-	alert.popoverController?.sourceView = self.view
-  alert.popoverController?.sourceRect = CGRect(x: view.bounds.minX, y: view.bounds.minY, width: 0, height: 0)
-```
-
-두번째 방법 `barButtonItem` 설정해 주기
-
-```swift
-alertController.popoverPresentationController?.barButtonItem = sender
-present(alertController, animated: true, completion: nil)
-```
-
-`barButtonItem` 을 눌렀을때 `barButtonItem` 아래에 액션시트가 뜨고 싶다면 위와같이 !   
-
----
-
-
-
-
----
-
+<br><br><br>
 ## VI. 관련 학습 내용 
 #### 학습 키워드
-- HTTP
-- 네트워크 통신
-- url Session
-- Cache
-- Paging
-- UICollectionView
-- 비동기 통신
+- 스토리 보드 없애고 사용하기.
+- SplitView
+- Core Data
 <br>
     
 <details>
     <summary>학습내용 정리</summary>
     <div markdown="1">       
 
-#### 1. HTTP 
-(1) HTTP란?
-- hyper text trasition protocol 을 줄임말. 네트워크 통신을 이용하여 데이터를 주고 받기 위하여 생긴 약속이다.
-- 클라이언트가 url을 통하여 `request(요청)` 하면 서버에서는 해당 요청사항에 맞는 결과를 `response(응답)` 하는 형태로 동작한다. 
+## 1. 스토리 보드 없애고 사용하기.
+<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3c083d53-9444-413c-82b1-d44a4663e352/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T022309Z&X-Amz-Expires=86400&X-Amz-Signature=eb155e3b74b1e510d3acb1f90b65711366de24a6895e16702fc98a064c15fced&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
+<br>
 
-(2) Request 와 Response
- - Request Message
-    - HTTP Request는 넓게보면 세가지 종류가 있다. 시작라인, 헤더, 바디
-    - start Line은 서버가 수행해야할 동작을 나타낸다. HTTP request method를 명시.
-    - Header는 요청의 내용을 좀 더 구체와 시키고, 조건에 따른 제약사항을 넣기도 한다. 
-    - Body는 리소스를 가져오는 Request는 보통 본문이 없다. 전달해야될 내용이 없기 때문이다. 일부 요청은 업데이트를 위해 서버에 데이터를 전송한다. POST시 그럴 확률이 높다. Data를 Body에 담아 request 요청을 한다.
-    - Body의 종류는 단일 리소스, 각기 다른 리소스가 있을 경우 멀티파트를 사용한다.
-    - Request HTTP 메시지 예시 
-    ```swift
-    POST / HTTP / 1.1                   <- 시작부분
-    HOST: localhost:8000                <- header
-    Content-Type: multipart/form-data;  <- header
-    Content-Length: 333                 <- header
-    //한칸띄어쓰면 그 이후에는 본문이 시작된다.
-    -123456          <- body
-    (more Data)      <- body
-    ``` 
-- Response Message
-    
+<br>
 
+- info.plist 에서 해당 항목을 삭제한다. 이후 `SeneDelegate`로 이동하여 scene(_: WillConnectTo:)메서드에 아래와 같이 작성한다.
 
+```swift=
+guard let windowScene = (scene as? UIWindowScene) else { return }
+    window = UIWindow(windowScene: windowScene)
+    window?.rootViewController = UINavigationController(rootViewController: ViewController())
+    window?.makeKeyAndVisible() // 이거를 하지 않으면 화면에 보이지않음
+```
+<br>
+<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ce489510-aa82-4aad-842c-898428c5844c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T022856Z&X-Amz-Expires=86400&X-Amz-Signature=f0f8a8842db864e945af20ed5b47261024b9297ebfa5fe5b85a25df3da2a685d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
 
-#### 2. URLSession
-- URLSession은 HTTP, HTTPS 를 통해 콘텐츠를 주고 받는 apple 에서 API를 제공해주는 클래스이다.
-- URLSession은 세가지 유형을 제공하고 있다. URLSession 개체가 가지고 있는 `Confiruation` 프로퍼티로 결정 할 수 있다.
-    - 기본적인 동작 방법은 Session Confiruation을 결정하고 URLSession을 생성한다.
-통신을 할 URL과 Request 를 설정한다.
-사용할 Task를 결정하고 Task를 실행한다.
-네트워크 통신은 기본적으로 비동기 처리 임으로 탈출 클로저를 사용하여, 통신이 완료됐을 때 동작을 설정한다.
+<br>
 
+<br>
 
-- Task
-    - Task 개체는 Session이 `request`을 보낸 후, `response`를 받을 때 내용들을 받는 역활을 하게 된다. 3가지 종류의 Task가 있다. 
-        - Data Task = Data 개체를 통해 주고받는 Task이다.
-        - Download Task = Data를 파일의 형태로 전환 후 다운 받는 Task이다. 백그라운드에서 다운할 수 있는 기능을 지원한다.
-        - Upload Task = Data를 파일의 형태로 전환 후 업로드 할 수 있는 Task이다.
+`window?.makeKeyAndVisible()` 메서드를 호출해주지 않으면, View들이 나타나지 않는다.
+뷰의 계층에도 아무것도 없음.
+`makeKeyAndVisible()` 은 해당 윈도우를 `keyWindow` 로 설정 및 `visible contents` 하라는 의미
 
-- URLRequest
-    - URLRequest를 통하여 서버로 `request`를 보낼 때 어떤 HTTP Request Method를 사용할 것인지, 어떤 내용을 전송할 것인지 설정 할 수 있다. 
-    - HTTPRequest의 setValue, addValue을 사용하여 헤더메시지를 설정하거나, 추가 할 수 있다. 
-    - 프로젝트 URLRequest 적용사항.
-    ```swift
-    private static func createRequest(httpMethod: HTTPMethod, url: URL, body: Data?, _ contentType: ContentType) -> URLRequest {
-        var request = URLRequest(url: url)
-        request.setValue("\(contentType); boundary=\(Boundary.literal)", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = String(describing: httpMethod)
-        request.httpBody = body
-        return request
+> `keyWindow` = 터치 관련된 이벤트가 아닌 이벤트나, 키보드 이벤트 등을 받고 있는 윈도우이다.
+한 시점에서 하나의 윈도우만 `keyWindow`이다.
+The key window receives keyboard and other non-touch related events.
 
-    // URLRequest의 헤더를 설정하고, 
-    // 어떤 request 할지 httpMethod에 설정하고, 
-    // httpbody에 데이터를 넣어
-    // URLRequest를 리턴하게 된다. 
-    }
-    ``` 
+<details>
+<summary>Window</summary>
+
+### 정의
+모든 iOS App은 하나이상의 `UIWindow` 인스턴스가 필요하다. 어떤 앱들은 하나 이상의 윈도우가 포함될 수 있다. 윈도우 인스턴스는 아래와 같은 일을 한다.
+- 어플리케이션의 `visibel Content`를 포함한다.
+- 어플리케이션의 뷰나 다른 객체 터치 이벤트를 전달하는 중요한 역활을 수행한다.
+- 화면 회전 변화(orientation change)에 대한 대응을 쉽게 할 수 있도록 앱의 `ViewController`들 과 상호작용한다.
+
+iOS에서 `Window`는 다른 뷰들을 담는 빈 컨테이너로 동작하며, 앱 라이프 사이클 동안 하나의 윈도우만 생성하고, 이 `Window`는 앱 실행 초기에 로드 되야 한다. 
+
+</details>
+
+--- 
+
+## 2. SplitView
+### 정의
+
+![SpiltView](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3090dc8c-bea3-429c-8494-b3ab8acc8778/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T025129Z&X-Amz-Expires=86400&X-Amz-Signature=7a8907f4c1874b7a0d3015673700b0adaa97b657dc96602f40454c98508323f0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+- 스플릿뷰 컨트롤러는 계층 인터페이스에서, 자식 뷰 컨트롤러를 관리하는 컨테이너 뷰 컨트롤러이다.
+- 해당 유형의 인터페이스에서는 뷰컨트롤러의 변경이 다른 콘텐츠 뷰의 내용을 변경한다.
+- 계층 구조 탐색에 가장 적합하다.
+- 스플릿뷰 컨트롤러는 window의 루트뷰 컨트롤러가 된다.
+- 자체적으로 중요한 모양이 없다. 대부분의 View는 자식뷰컨에의해 정의가 된다.
+
+> 스플릿뷰 컨트롤러를 네비게이션 컨트롤러 스택에 푸시 할 수 없다!!
+일부 다른 컨테이너 뷰컨에 스플릿 뷰를 자식으로 등록 할 수 있지만. 대부분의 경우 권장되지 않는 방법이다.
+
+### SplitView Style
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9b871d5e-bb26-4dc4-8993-e1c8eca9c646/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T025100Z&X-Amz-Expires=86400&X-Amz-Signature=614014ecc67d0e748bd1f2277ee2040b70956ca953ea6110fe67bda0c1e8b89c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+- iOS 14 이상에서 는 컬럼 스타일 레이아웃을 지원한다.
+- 컬럼 스타일 스플릿 뷰 컨트롤러를 사용하면 적절한 스타일과 함께 두 개 또는 세 개의 컬럼이 있는 인터페이스를 만들 수 있다.
+- `UISplitViewController.Style.doubleColumn` 을  사용하면, 2열 레이아웃으로 스플릿 뷰 컨트롤러를 만든다. 이 컨트롤러는 primary, secondary columns 두 개의 컨트롤러를 관리하게 된다.
+- iOS 14 이전에는 스플릿뷰 컨트롤러가 primary 컨트롤러와 secondary 컨트롤러가 있는 스타일만 지원했다.
+<br>
+### Child View Controllers
+- `cloumn-style SplitView`에서 `setViewController(_:for:)` 및 `viewController(for:)` 메서드를 사용하여 각 `cloumn`에 대한 뷰 컨트롤러를 설정하고 가져 올 수 있습니다.
+- `SplitViewController`는 `NavagationController`에서 모든 `childVC`를 래핑한다. 네비게이션컨트롤러가 없는 일반 뷰컨트롤러를 스플릿뷰컨트롤러에 설정(`setViewController(_:for:)`)하면 스플릿뷰컨트롤러는 네비게이션 컨트롤러를 만들고 뷰컨트롤러에 Set하게 된다. (그냥 뷰컨트롤러가 아닌 네비게이션 컨트롤러가 달려있게됨)
+- `viewController(for:)`를 통해 원래 뷰 컨트롤러를 반환하지만, 그 `children`속성에는 뷰 컨트롤러를 래핑하는데 사용한 `Navigation Controller`가 포함되어 있다. 
+- `show(_:)` or `hide(_:)`로 해당 컬럼을 표시하거나, 숨길 수 있다.
+
+--- 
+
+## 3.Core Data
+
+###  정의
+
+- Core Data는 객체 그래프 관리자 이다. 객체 그래프 관리자란 무엇인가?
+객체 그래프란 ? 서로 연결되어 있는 개체의 집합이다. Core Data 프레임 워크는 복잡한 개체 그래프를
+관리하는데 탁월하다.
+- Core Data 프레임워크는 개체 그래프에서 개체의 수명 주기를 관리한다. 선택적으로 개체그래프를 디스크에 유지 할 수 있으며, 관리하는 개체 그래프를 검색하기 위한 강력한 인터페이스도 제공한다.
+- Core Data는 그 이상이다. 프레임워크는 such as input validation , data model vesionning, change tracking 까지 가능하다.
+
+#### 저장 방식
+
+- 코어데이터는 객체 그래프 관리자라고 했으니, 관리하는 도구 일 뿐이고 저장방식은 무엇이 잇을까?
+    - SQLite 처럼 데이터베이스를 저장소로 사용 할 수 있다.
+    - 이진 저장소도 사용이 가능하다. 메모리 저장소도 지원한다.
+
+---
+
+### 객체 그래프 관리자 (Object Graph Manager)
+
+- 코어데이터의 정의는 애플에서는 앱을 위해 모델(Model) 계층의 객체를 관리하는데 사용하는 프레임워크이자, 라이프 사이클이나 영속성 관리를 위한 기능을 제공하는 객체 그래프 관리자 라고 한다.
+- 코어데이터는 영구 저장소에 저장된 각각의 레코드를 읽어온 다음, 독립적인 객체를 만들어 낸다.
+우리가 데이터를 다르는 행위는 코어 데이터에서 모두 객체 단위로 이루어진다. 
+이때 레코드의 데이터가 객체화된 것을 가리켜 관리되는 객체 (Managed Object) , 관리 객체라고 부른다.
+- 코어데이터가 객체 그래프를 관리를 담당하는 것은 객체들을 연결 할 수 있으며, 이 연결을 통해 영속적으로 동기화 된다는 뜻이다. 만약 A,B라는 객체가 연결되어 있는 상태에서 A에서 업데이트가 되면, B에서도 연관된 데이터의 업데이트가 수행된다. 삭제도 마찬가지이다.
+
+### 코어데이터의 구조
+
+- 코어데이터는 다층 구조로 이루어진 프레임워크로, 각 층을 담당하는 핵심 객체들이 밀접한 연관성을 가친 채 상호작용하게 된다. 전체적으로 코어 데이터는 개발자와 영구 저장소 사이를 이어주는 프레임워크 이다.
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2af3b0ff-3ce2-47ab-8f0b-6ea98cdb2442/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T031304Z&X-Amz-Expires=86400&X-Amz-Signature=d801ef4dd30292e31e660f658c620777127fb14cbf651477d9536ec819a5bd2a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+### 관리객체 (Managed Object)
+
+- 관리객체는 코어 데이터에서 데이터를 저장하기 위해 생성하는 인스턴스이다. 관계형 DB에서는 테이블의 행, 레코드 정도로 생각하면 된다. 행과 레코드는 아래 그램 참조, Row라고 보면 될 듯.
+
+![Untitled3](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/67515318-1b4a-4abc-9913-9465f374535b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T031544Z&X-Amz-Expires=86400&X-Amz-Signature=c50f7def0748c4ef8955cfce488afee4fc379c056619b4e5376029199b13378a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
 <br>
 
 
-#### 2. Lazy Loading 
-- lazy Loading이란?
-    - Lazy loading is a design pattern commonly used in computer programming to defer initialization of an object until the point at which it is needed. 즉 필요한 순간에만 초기화되도록 하는 디자인 패턴이다. 
-    - 테이블뷰나 컬렉션뷰의 경우 주로 `tableVeiw(_:cellForRowAt:)`, `collectionView(_:cellForItemAt:)` 메소드에서 `cell`이 스크린에 보여지기 직전 혹은 보여지기 전에 `cell`을 구성할 contents들을 위한 객체를 구현한다. 
+#### 데이터베이스와 코어데이터의 차이?
+
+- 데이터 베이스는 말그대로 데이터들이 모여있는 집합소이다. 데이터를 저장하기 위한 곳인 것이다.
+
+    둘의 차이는 명확하다. 코어데이터는 객체 그래프를 관리하는 프레임 워크고,
+
+    DB는 말그대로 데이터들의 집합소인 것이다.
+
+    코어데이터는 DB를 저장소로 쓸 수 있지만, 프레임워크 자체는 DB가 아닌 것 이다.
 
 
-#### 3. Cache
-(1) Cache란?
-- 자주 사용하는 데이터나 값을 미리 복사해 놓는 임시장소
-- 언제 사용 : 캐시접근하는 시간과 서버에 있는 데이터에 접근하는 시간 중 후자가 더 오래걸리는 경우, 값을 다시 계산하는 시간을 절약하고 싶은 경우에 사용
-- 장점 : 더 빠른 속도로 데이터에 접근할 수 있다. 
-- 구분의 기준 : local and Global, 저장 장소, 지역성에 따라 캐쉬의 구분이 달라진다. 
+---
 
-    
-     
-#### 4. UICollectionView
-<img src="https://user-images.githubusercontent.com/71247008/131329119-da338da1-ceff-4a48-8646-9270e2c4d08f.png" width="400" height="300">
-<br><br>
+### Core Data 까보기
 
-- 컬렉션뷰는 테이블뷰와 비슷한 구조를 가지고 있다. `View`에 나타내야하는 정보를 `DataSource`로 요구하며, 이벤트와 같은 기능을 `Delegate`로 구현하고 있다. 다만 다른점이 있다면, `CollectionViewFlowLayout` 으로 셀의 크기와 너비를 설정해주어야 한다.
-- 기본적으로 DataSource 구현은 TableView와 많이 닮아 있다. numberOfSections 메서드로 섹션의 갯수를 지정해 줄 수 있으며, numberOfItemsInSection 메서드로 섹션안에 셀이 얼마나 있어야 할지 알려주게 된다. 마지막으로 cellForItemAt 메서드로 셀을 생성하고, 해당 셀에 데이터를 주입시켜 반환을 시키면 된다.
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5f2fec32-88ba-4fa9-8e91-77bfe6f71731/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T031801Z&X-Amz-Expires=86400&X-Amz-Signature=b08147514a55189881d2562d6b60e95991d968faf162a1ba73966fa033c7bb18&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-```swift
-//    섹션의 갯수를 설정하는 부분
-func numberOfSections(in collectionView: UICollectionView) -> Int {
-        OpenMarketDataSource.openMarketItemList.count
+### Managed Object (관리 객체)
+
+#### 정의
+
+- 코어데이터에서 데이터를 저장하기 위해 생성하는 인스턴스이다.
+- 관계형 데이터 베이스에서 행(ROW)나 레코드로 생각하면 된다.
+- 테이블의 행의 해당하는 데이터가 코어데이터에서는 독립된 객체로 동작을 하게 된다.
+
+### Managerd Object Context (관리 객체 컨텍스트)
+
+#### 정의
+
+- 코어데이터에서 가장 핵심적인 객체로,  크게 두가지 역활을 담당한다.
+- 첫번째 역활은 MO(Managed Object) 를 담거나, 생성, 삭제 할 수 있는 역활을 한다.코어데이터에 생성되는 MO는 모두 컨텍스트에 담겨 관리가 된다. 우리는 컨텍스트를 통해 새로운 MO를 생성하거나, 기존 MO삭제, Context에 있는 모든 MO를 영구저장소에 보내 저장 할 수 도 있다.
+- 두번째 역활은 영구 저장소 (Persistent  Store) 및 영구 저장소 코디네이터 (Persistent Store Coordinator)에 대한 관리자이다. 
+컨텍스트는 영구 저장소 코디네이터와 매우 밀접되어 있으며, 우리가 요청하는 읽기 및 쓰기 요청을 처리한다.
+코어데이터에서 가장중요한게 컨텍스트의 참조를 획득하는 것.
+
+### Persistent Store Coordinator(영구저장소 코디네이터)
+
+#### 정의
+
+- 코디네이터는 컨텍스트와 직접 데이터를 주고 받으면서 다양한 영구 저장소의 접근을 조정하고, 해당 저장소에 실제 입출력을 담당한다.
+
+### Managed Object Model (관리 객체 모델)
+
+#### 정의
+- DB로 치자면, 테이블의 구조를 정의하는 스키마에 해당됨.
+- 코어데이터에서 테이블에 대응하는 엔티티(Entity)의 구조를 정의하는 객체인 동시에 이 스키마를 바탕으로 정의된 MO 패턴의 모델 클래스를 가르킨다.(클래스 타입이 생성되나봐요)
+- Managed Object에 저장될 데이터 구조에 대한 정보를 담고 있다.
+- 관리 객체 모델은 Xcode에서 설계한 엔티티로부터 생성된다.
+
+- Managed Object와 Managed Object Model을 헷갈려 하는 경우가 있음.  정확히 구분하자면 MOM은 타입이다. MO는 MOM이 인스턴스화 된 것임.
+
+### Persistent Object Store (영구 객체 저장소)
+
+#### 정의
+
+- 코어데이터를 사용할때 데이터가 저장되는 저장소 환경을 말한다.
+- 저장소의 타입은 총 4가지
+    - 인메모리 타입 - 휘발성 메모리에 올리고 프로그램 종료시 삭제됨.
+    - 플랫 바이너리 - 2진파일
+    - XML (iOS 지원안함)
+    - SQLite (디폴트 값임)
+
+---
+
+ 
+
+### 엔티티(Entity)
+
+#### 정의
+
+- 데이터가 저장될 구조 및 형식임. 관계형 DB에서 테이블을 생각하면 된다,
+- 내부 구성은 크게 3가지 속성(Attribute), 릴레이션(Relation), 패치 속성(Fetched Properties)가 있다.
+- 속성은 컬럼이라고 보면될까?
+- 릴레이션은 다른 엔티티와의 관계를 정의하는 역활.
+- 데이터 검색시 반복요청 이나, 값만 바꾸어 사용하는 비슷한 요청들을 미리 템플릿 화 해 놓은 것을 말함.
+
+#### 엔티티의 상속 과 추상화
+
+- 엔티티는 상속이 가능하다. 클래스와 비슷한 방식으로 동작을 하는데, 일부만 차이가 있는 유사한 엔티티 들이 여러 개 있을 경우 엔티티마다 동일한 Attribute를 정의하는 대신 공통 Attibute를 뽑아 상위 엔티티를 정의하고, 나머지 엔티티들은 이를 상속받는 하위 엔티티로 정의하여 사용할 수 있다.
+- Abstract Entity를 체크하게되면 MO인스턴스 생성이 안되며 이 엔티티를 상속받는 하위 엔티티만 MO인스턴스 생성 가능.
+
+    ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c18f66b0-31a5-4556-93ad-1e2a4ef193e2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T032254Z&X-Amz-Expires=86400&X-Amz-Signature=e46b27b6f027f68a704c3265ff6cbd6ced00ddbc1f07007d6a98b02bade0fe2c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+- Parent Entity에서 상속받고 싶은 Entity 선택가능.
+
+### Managed Object Model Class
+
+- 엔티티가 정의 되면 자동으로 엔티티구조를 객체형태로 변환한 데이터 모델 클래스 를 생성한다.
+- 엔티티 인스펙터에서 Class 이름을 설정 할 수 있다.
+- Xcode에서 자동으로 생성하는 데이터 모델 클래스는 개발자가 손을 대거나 수정할 수 없을 뿐만 아니라 탐색기 영역에도 나타나지 않는다.. 필요하다면 커스텀 모델 클래스를 명시적으로 정의해서 사용 할 수 있다.(왠만하면 이렇게 쓰자)
+- 커스텀 모델 클래스 명시적으로 생성시 Entity 인스펙터에서 Codegen 을 꼭 Menual, None으로 변경해주자. 이걸 안해놓으면 커스텀클래스를 생성하고 코어데이터에서도 모델 클래스를 또 만들게 됨. 충돌 남.
+
+### NSPersistentContainer
+
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ef55c8ee-f5db-4189-a4e2-55884e5c56fc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T031924Z&X-Amz-Expires=86400&X-Amz-Signature=cf596daa9635ae90d3192e2fea9f6a8e0969bb6574f92658abbe001d11379a0b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+- Persistent Container는 그림과 같이 Model Context, Store Coordinator, Model이 포함되어있음.
+- Manage and persist your app’s model layer.
+- Core Data Stack을 나타내는 필요한 모든 객체를 포함한 컨테이너.
+- 프로젝트에 CoreData를 체크했으면 Appdelegate에 코드가 추가 되어 있음.
+    - 코드
+
+        ```swift
+        lazy var persistentContainer: NSPersistentCloudKitContainer = {
+                let container = NSPersistentCloudKitContainer(name: "CloudNotes")
+                container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+                    if let error = error as NSError? {
+                        fatalError("Unresolved error \(error), \(error.userInfo)")
+                    }
+                })
+                return container
+            }()
+            
+            func saveContext () {
+                let context = persistentContainer.viewContext
+                if context.hasChanges {
+                    do {
+                        try context.save()
+                    } catch {
+                        let nserror = error as NSError
+                        fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                    }
+                }
+            }
+        ```
+
+        저장소 컨테이너는 바로 초기화가 되는게 아닌 호출될때 초기화가 된다.
+
+        saveContext는 커밋개념이라 보면됨 자주 호출은 좋지 않고, 컨텍스트에 변경사항이 있으면(모델의 변화) 컨텍스트에 save.
+
+## NSFetchRequest<Result>
+
+- 코어데이터에 저장된 데이터를 가져올때 요청사항을 정의한 NSFetchRequest 인스턴스가 사용된다.
+- 다양한 요청을 복합적으로 정의 할 수 있다. 대표적인 요청은 아래와 같다.
+    - 어디에서 데이터를 가져올 것인가? (엔티티지정)
+    - 어떤 데이터를 가져올 것인가? (검색조건 지정)
+    - 어떻게 데이터를 가져 올 것인가? (정렬 조건 지정)
+
+## NSEntityDescription
+
+- 엔터티는 관리 개체에 대해 클래스가 id에 대해, 또는 데이터베이스에 비유하자면 테이블이 행에 대해 설명하는 것입니다. 인스턴스는 엔티티의 이름, 속성(NSAttributeDescription 및 NSRelationshipDescription의 인스턴스로 표현되는 속성 및 관계) 및 엔티티를 나타내는 클래스를 지정합니다.
+
+    NSEntityDescription 개체는 인스턴스가 Core Data Framework를 사용하는 애플리케이션의 영구 저장소에 있는 항목을 나타내는 데 사용되는 특정 클래스와 연결됩니다. 최소한 엔터티 설명에는 다음이 포함되어야 합니다.
+
+    - Name
+    - The name of a managed object class
+
+    (엔티티에 관리 객체 클래스 이름이 없으면 기본적으로 NSManagedObject가 됩니다.)
+
+## NSFetchResultsController
+
+- Core Data Fetch 요청 결과를 관리하거나, 사용자에게 데이터를 보여주기 위해 사용하는 컨트롤러.
+
+### 컨트롤러가 하는일
+
+- 연결된 managed object context 의 변경사항을 모니터링 하고, 결과의 변경사항을 (Set) delegate에게 알림
+- 동일한 데이터가 이후에 다시 표시되는 경우 작업을 반복할 필요가 없도록 캐싱도 가능함.
+- 컨트롤러는 대리자가 있는지, 캐시 파일 이름이 설정되어있는지 여부에 따라 3가지 작동방법으로 나뉨
+    - No Tracking: Delegate 가 nil 일때, 컨트롤러는 단순히 Fetch가 되었을때와 같이 데이터에 대한 엑세스를 제공한다.
+    - Memory-Only Tracking: Delegate가 nil이 아니고, 캐시 파일 이름이 nil일때. 컨트롤러는 results를 모니터링하고 관련 변경에 대한 response로 섹션과 정보를 업데이트함.
+    - Full Persistent Tracking: Delegate와 File cache가 nil이 아닐때. Memory-Only Tracking 업무에 + 영구 캐시를 유지한다.
+
+### 사용법
+
+- 일반적으로 NSfetchedResultsController의 인스턴스를 테이블뷰 컨트롤러의 인스턴스 변수로 생성한다.
+- 컨트롤러를 초기화 할때 4개의 매개변수를 제공한다.
+    - FetchRequest: Fetch요청임. 결과를 정렬하기위해 적어도 정렬 descriptor 가  있어야함.
+    - Managed Object Context:  해당 컨텍스트를 사용하여 Fetch request를 실행함.
+    - 옵셔널 Section Name Key Path : 컨트롤러는 key Path 를 사용해 결과를 섹션으로 분리함( nil이면 컨트롤러가 단일 섹션을 생성)
+    - 옵셔널 Cache Name: 컨트롤러가 사용해야 하는 캐시파일 이름(nil이면 캐싱방지됨) 캐시를 사용하면 섹셕 및 인덱스 정보를 계산하는 오버헤드를 피할 수 있다.
+
+- 인스턴스를 생성한 후 실제로 Fetch 하기위한 performFetch를 호출한다.
+- 애플이 짜 놓은 예시 코드
+
+    ```swift
+    let context = <#Managed object context#>
+    let fetchRequest = NSFetchRequest<AAAEmployeeMO>(entityName: "Employee")
+    // Configure the request's entity, and optionally its predicate
+    fetchRequest.sortDescriptors = [NSSortDescriptor(key: "<#Sort key#>", ascending: true)]
+    let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+    do {
+        try controller.performFetch()
+    } catch {
+        fatalError("Failed to fetch entities: \(error)")
     }
-//    섹션에 셀의 갯수를 설정하는 부분
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        OpenMarketDataSource.openMarketItemList[section].items.count
-    }
-//    Cell을 생성하며, Cell을 configure하여 Cell을 return 해주는 역활을 담당.
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "openMarketCell", for: indexPath) as? OpenMarketItemCell else {
-            return UICollectionViewCell()
+    ```
+
+### Controller Delegate
+
+- delegate를 설정하면, 컨트롤러가 context의 변경 알림을 수신하도록 설정한다. context에 모든 변경 사항이 처리되고 그에 따라 결과가 업데이트된다.
+
+### Implementing the Table View Datasource Methods
+
+- Code
+
+    ```swift
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        if let frc = <#Fetched results controller#> {
+            return frc.sections!.count
         }
-```
-
-- UICollectionViewFlowLayout
-<img src="https://user-images.githubusercontent.com/71247008/131330825-95071f5d-ed95-459b-980a-64101bd31e10.png" width="400" height="200">
-    - FlowLayout은 콜렉션 뷰의 delegate 나 Flowlayout 클래스의 프로퍼티를 사용하여 셋팅 할 수 있다.
-    - delegate는 CollecvionView가 header 나 footer 를 설정하거나, 셀마다 Size를 다르게 하고 싶을 때 유용하다고 하다.
-
-
-
+        return 0
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let sections = self.<#Fetched results controller#>?.sections else {
+            fatalError("No sections in fetchedResultsController")
+        }
+        let sectionInfo = sections[section]
+        return sectionInfo.numberOfObjects
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = <#Get the cell#>
+        guard let object = self.<#Fetched results controller#>?.object(at: indexPath) else {
+            fatalError("Attempt to configure cell without a managed object")
+        }
+        // Configure the cell with data from the managed object.
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let sectionInfo = <#Fetched results controller#>?.sections?[section] else {
+            return nil
+        }
+        return sectionInfo.name
+    }
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return <#Fetched results controller#>?.sectionIndexTitles
+    }
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        guard let result = <#Fetched results controller#>?.section(forSectionIndexTitle: title, at: index) else {
+            fatalError("Unable to locate section for \(title) at index: \(index)")
+        }
+        return result
+    }
+    ```
 
 </div>
 </details>
+
+
+
