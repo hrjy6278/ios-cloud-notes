@@ -494,7 +494,6 @@ static func localizedString(of lastModifier: Int) -> String {
 <br>
 
 ### TextView의 스크롤의 시작부분이 제일 상단이 아닌, 중간쯤에 위치하는 에러
-
 #### 원인
 
 <img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/49a33f6a-3ff3-4ea1-9eaa-bde62bc68604/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T073822Z&X-Amz-Expires=86400&X-Amz-Signature=6ea7f634ae0d99bade5e2e9bcea6447771999f459301627b623700bba486f7d9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
