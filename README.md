@@ -395,7 +395,6 @@ static func generateAlertController(title: String?, message: String?, style: UIA
  - [9. 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안되는 에러](메모의-내용-수정시,-메모리스트에-수정된-내역이-반영이-안되는-에러) <br>
  - [10. TextView의 Text가 마음대로 단어가 바뀌는 에러](#textView의-Text가-마음대로-단어가-바뀌는-에러.) <br>
 <br>
----
 ### 테이블뷰에서 뷰들이 한곳에 모여있는 에러
 
 ####  원인
