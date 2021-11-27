@@ -398,8 +398,8 @@ static func generateAlertController(title: String?, message: String?, style: UIA
 ### 테이블뷰에서 뷰들이 한곳에 모여있는 에러
 
 ####  원인
+![테이블뷰에러](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a3e3b34c-8cdb-4ab8-a04a-dbe1af46fe00/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T052749Z&X-Amz-Expires=86400&X-Amz-Signature=92695e9cde66ca9a8279541a9cfa229d50f6314f7695a48bc50aea4658bdf476&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a3e3b34c-8cdb-4ab8-a04a-dbe1af46fe00/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T072342Z&X-Amz-Expires=86400&X-Amz-Signature=64ede17e3cd561251bd9ad72dcc12c76e9315d2066187b69f43e820dd2aaa5d9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
 
 저 검은색들이 스택뷰로 ContentView에 addSubView를 한 것인데  저기에 셀이 다 모여있음... 왜그런걸까?
 
@@ -434,7 +434,7 @@ func configureLables() {
 
 #### 원인
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2aa1b386-48b3-4c0d-8064-f0dd79568846/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T072444Z&X-Amz-Expires=86400&X-Amz-Signature=6bbc81728b9d23f8010e94a2973b22979b3ded4479d426b58a263457c738f294&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2aa1b386-48b3-4c0d-8064-f0dd79568846/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T052933Z&X-Amz-Expires=86400&X-Amz-Signature=a1d831946de0e1ffb1e1e0aba62dfc5133b9802d856764971d5cff2242c01ba1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
 
 자세히 보면 왼쪽 Line이 이어져있지않음
 
@@ -450,17 +450,17 @@ func configureLables() {
 
 #### 원인
 
-<img src ="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/98f8991e-bd5a-452b-ab41-fbc54906d67f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T073416Z&X-Amz-Expires=86400&X-Amz-Signature=8cb162096fa90b07f495dc8f9e4d8d65c7182529f7febe1f0055c41a71ba7724&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
+<img src ="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/98f8991e-bd5a-452b-ab41-fbc54906d67f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T052947Z&X-Amz-Expires=86400&X-Amz-Signature=e6660ff08f6efbb5ea0f9403b82f09a7eaa2d082df48be46926f653dfe94e27e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
 
 DateFormatter의 locale을 현재 기기상의 locale로 표현했는데
 
 시뮬레이터에서는 계속 날짜가 영어권으로 나온다..
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/de357c37-df82-4025-a35c-2a1db29f155f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T073449Z&X-Amz-Expires=86400&X-Amz-Signature=3a8ab3bea354aa0e45204d8cf733a06e90d97fe9d83fbd7a8d4ae2319cc302bf&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
+<img src="hhttps://s3.us-west-2.amazonaws.com/secure.notion-static.com/de357c37-df82-4025-a35c-2a1db29f155f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053002Z&X-Amz-Expires=86400&X-Amz-Signature=42d50fe9e2f73dfc01f714e63e4b28cbba788ba6dc18ba4b4a2108b9ca6959bc&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
 
 Locale.current를 print해보면
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c43091b-41b4-4129-949a-3dc0b0d904c5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T073507Z&X-Amz-Expires=86400&X-Amz-Signature=3bd67675a849f8e923734252fd854e81689413f859a60ff7ae31ea69876c2ab3&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c43091b-41b4-4129-949a-3dc0b0d904c5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053015Z&X-Amz-Expires=86400&X-Amz-Signature=4f5462ff6d668c706ed8ea94b090797759a196617d132a36237173dc95175b57&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
 
 사용하는 언어가 en으로 되어있다.. 시뮬레이터에 아무리 한국어 설정을 해도 저부분이 바뀌지 않는다.
 
@@ -496,7 +496,7 @@ static func localizedString(of lastModifier: Int) -> String {
 ### TextView의 스크롤의 시작부분이 제일 상단이 아닌, 중간쯤에 위치하는 에러
 #### 원인
 
-<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/49a33f6a-3ff3-4ea1-9eaa-bde62bc68604/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T073822Z&X-Amz-Expires=86400&X-Amz-Signature=6ea7f634ae0d99bade5e2e9bcea6447771999f459301627b623700bba486f7d9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
+<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/49a33f6a-3ff3-4ea1-9eaa-bde62bc68604/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053040Z&X-Amz-Expires=86400&X-Amz-Signature=5de3a97b0a5f2610bb8d43bb16b3b9da37a3ed5b264804c0b0eec9e879d2a876&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
 
 <br>
 
@@ -559,7 +559,7 @@ tableview를 상속받아서 그런것인가?
 
 ---
 
-<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/72b1291e-4b4b-469f-b481-48260b75586a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T074121Z&X-Amz-Expires=86400&X-Amz-Signature=64115fcf8a89cc21a42d577d77be7cbf5135a76dc1bc81efbc087d2ae07fd323&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
+<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/72b1291e-4b4b-469f-b481-48260b75586a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053112Z&X-Amz-Expires=86400&X-Amz-Signature=229e746795f6e6be23c5a15995433e205d0a7a7e433bcbf3f645eff7212f0eed&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
 
 <br>
 <br>
@@ -641,7 +641,7 @@ DispatchQueue.global().async {
 
 #### 원인
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/537668f7-a60b-422d-8b70-5b295f45ef8e/131966577-7928382a-32b6-4ed3-ad1c-266d6a5205f2.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T074751Z&X-Amz-Expires=86400&X-Amz-Signature=463e155b3026c7b30a5a3b7aef84af712c8a7369cb1238af94e4f4d8bc121c0d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22131966577-7928382a-32b6-4ed3-ad1c-266d6a5205f2.gif%22">
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/537668f7-a60b-422d-8b70-5b295f45ef8e/131966577-7928382a-32b6-4ed3-ad1c-266d6a5205f2.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053137Z&X-Amz-Expires=86400&X-Amz-Signature=ab0bc089ddf7017b792a2780ee57edb1052517e7d72dd8359f30e11c3d068d48&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22131966577-7928382a-32b6-4ed3-ad1c-266d6a5205f2.gif%22&x-id=GetObject">
 <br>
 <br>
 
@@ -763,7 +763,7 @@ dataSource = MemoSourceData(tableView: self.tableView, cellProvider: { tableView
 
 ### 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안되는 에러
 #### 원인
-<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f744ef83-ec87-4dcd-8e61-3ec97569e789/Simulator_Screen_Recording_-_iPhone_12_Pro_Max_-_2021-09-07_at_15.40.32.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210923%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210923T075406Z&X-Amz-Expires=86400&X-Amz-Signature=6aeb92c3bd3f66bca3b61f7896f198c1d4b75a81767d0901d04df431fc95cccc&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Simulator%2520Screen%2520Recording%2520-%2520iPhone%252012%2520Pro%2520Max%2520-%25202021-09-07%2520at%252015.40.32.gif%22">
+<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f744ef83-ec87-4dcd-8e61-3ec97569e789/Simulator_Screen_Recording_-_iPhone_12_Pro_Max_-_2021-09-07_at_15.40.32.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053159Z&X-Amz-Expires=86400&X-Amz-Signature=5c2b9741093fa762f6aefe664dd1367b4f32a112ed5c6f30ee66577decd1d7ca&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Simulator%2520Screen%2520Recording%2520-%2520iPhone%252012%2520Pro%2520Max%2520-%25202021-09-07%2520at%252015.40.32.gif%22&x-id=GetObject">
 
 위 영상과 같이, 메모를 수정하고 나서 `List` 로 돌아갔을때  내용이 바뀌지 않는 증상이 발생함. 하지만 메모의 내용을 눌렀을때 `DetailVC` 에서는 반영이 되어 있음.
 
@@ -897,7 +897,7 @@ the table view or one of its superviews has not been added to a window 이 줄�
     <div markdown="1">       
 
 ## 1. 스토리 보드 없애고 사용하기.
-<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3c083d53-9444-413c-82b1-d44a4663e352/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T022309Z&X-Amz-Expires=86400&X-Amz-Signature=eb155e3b74b1e510d3acb1f90b65711366de24a6895e16702fc98a064c15fced&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
+<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e592472c-258f-483e-8fa3-cc4d953c555e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053544Z&X-Amz-Expires=86400&X-Amz-Signature=18ebbadb310793cf0583d536dc6ca5ae959df31f155025605f129a0e4abc74f6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
 <br>
 
 <br>
@@ -910,9 +910,6 @@ guard let windowScene = (scene as? UIWindowScene) else { return }
     window?.rootViewController = UINavigationController(rootViewController: ViewController())
     window?.makeKeyAndVisible() // 이거를 하지 않으면 화면에 보이지않음
 ```
-<br>
-<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ce489510-aa82-4aad-842c-898428c5844c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T022856Z&X-Amz-Expires=86400&X-Amz-Signature=f0f8a8842db864e945af20ed5b47261024b9297ebfa5fe5b85a25df3da2a685d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22">
-
 <br>
 
 <br>
@@ -943,7 +940,7 @@ iOS에서 `Window`는 다른 뷰들을 담는 빈 컨테이너로 동작하며, 
 ## 2. SplitView
 ### 정의
 
-![SpiltView](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3090dc8c-bea3-429c-8494-b3ab8acc8778/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T025129Z&X-Amz-Expires=86400&X-Amz-Signature=7a8907f4c1874b7a0d3015673700b0adaa97b657dc96602f40454c98508323f0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![SpiltView](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fdc0698d-a324-4b16-a6b1-784fb278381f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053817Z&X-Amz-Expires=86400&X-Amz-Signature=1024bf7975e3ca83b138b0edf89a603edce69e43642774723284b63ec68d720e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 - 스플릿뷰 컨트롤러는 계층 인터페이스에서, 자식 뷰 컨트롤러를 관리하는 컨테이너 뷰 컨트롤러이다.
 - 해당 유형의 인터페이스에서는 뷰컨트롤러의 변경이 다른 콘텐츠 뷰의 내용을 변경한다.
@@ -956,7 +953,7 @@ iOS에서 `Window`는 다른 뷰들을 담는 빈 컨테이너로 동작하며, 
 
 ### SplitView Style
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9b871d5e-bb26-4dc4-8993-e1c8eca9c646/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T025100Z&X-Amz-Expires=86400&X-Amz-Signature=614014ecc67d0e748bd1f2277ee2040b70956ca953ea6110fe67bda0c1e8b89c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a54561c0-cf1f-4597-9b5d-f5d89b1027b9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053902Z&X-Amz-Expires=86400&X-Amz-Signature=8a68d25ff7fb0ec8f111dcf44b4a4f7448dfff18b47bc1ffe2870b38181c58c0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 - iOS 14 이상에서 는 컬럼 스타일 레이아웃을 지원한다.
 - 컬럼 스타일 스플릿 뷰 컨트롤러를 사용하면 적절한 스타일과 함께 두 개 또는 세 개의 컬럼이 있는 인터페이스를 만들 수 있다.
@@ -1001,13 +998,13 @@ iOS에서 `Window`는 다른 뷰들을 담는 빈 컨테이너로 동작하며, 
 
 - 코어데이터는 다층 구조로 이루어진 프레임워크로, 각 층을 담당하는 핵심 객체들이 밀접한 연관성을 가친 채 상호작용하게 된다. 전체적으로 코어 데이터는 개발자와 영구 저장소 사이를 이어주는 프레임워크 이다.
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2af3b0ff-3ce2-47ab-8f0b-6ea98cdb2442/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T031304Z&X-Amz-Expires=86400&X-Amz-Signature=d801ef4dd30292e31e660f658c620777127fb14cbf651477d9536ec819a5bd2a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2af3b0ff-3ce2-47ab-8f0b-6ea98cdb2442/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T054117Z&X-Amz-Expires=86400&X-Amz-Signature=7305c52812274e7db800070a8a38f9161cc5aba4c959b59aea3b6662a5453598&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 ### 관리객체 (Managed Object)
 
 - 관리객체는 코어 데이터에서 데이터를 저장하기 위해 생성하는 인스턴스이다. 관계형 DB에서는 테이블의 행, 레코드 정도로 생각하면 된다. 행과 레코드는 아래 그램 참조, Row라고 보면 될 듯.
 
-![Untitled3](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/67515318-1b4a-4abc-9913-9465f374535b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T031544Z&X-Amz-Expires=86400&X-Amz-Signature=c50f7def0748c4ef8955cfce488afee4fc379c056619b4e5376029199b13378a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![Untitled3](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/67515318-1b4a-4abc-9913-9465f374535b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T054215Z&X-Amz-Expires=86400&X-Amz-Signature=824094c9741e82f08f8174759ee63880ba6dd109d7e308629c8c2bec3d38de3a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 <br>
 
@@ -1027,7 +1024,7 @@ iOS에서 `Window`는 다른 뷰들을 담는 빈 컨테이너로 동작하며, 
 
 ### Core Data 까보기
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5f2fec32-88ba-4fa9-8e91-77bfe6f71731/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T031801Z&X-Amz-Expires=86400&X-Amz-Signature=b08147514a55189881d2562d6b60e95991d968faf162a1ba73966fa033c7bb18&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5f2fec32-88ba-4fa9-8e91-77bfe6f71731/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T054236Z&X-Amz-Expires=86400&X-Amz-Signature=42e527b7c0c209f1f73063969216f01d047f0f7ea773078be05f89563f19dbec&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 ### Managed Object (관리 객체)
 
@@ -1093,7 +1090,7 @@ iOS에서 `Window`는 다른 뷰들을 담는 빈 컨테이너로 동작하며, 
 - 엔티티는 상속이 가능하다. 클래스와 비슷한 방식으로 동작을 하는데, 일부만 차이가 있는 유사한 엔티티 들이 여러 개 있을 경우 엔티티마다 동일한 Attribute를 정의하는 대신 공통 Attibute를 뽑아 상위 엔티티를 정의하고, 나머지 엔티티들은 이를 상속받는 하위 엔티티로 정의하여 사용할 수 있다.
 - Abstract Entity를 체크하게되면 MO인스턴스 생성이 안되며 이 엔티티를 상속받는 하위 엔티티만 MO인스턴스 생성 가능.
 
-    ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c18f66b0-31a5-4556-93ad-1e2a4ef193e2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T032254Z&X-Amz-Expires=86400&X-Amz-Signature=e46b27b6f027f68a704c3265ff6cbd6ced00ddbc1f07007d6a98b02bade0fe2c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+    ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c18f66b0-31a5-4556-93ad-1e2a4ef193e2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T054255Z&X-Amz-Expires=86400&X-Amz-Signature=67836f652b5cee3e64f56ce59a8bd3a09adc65635f7b51a28dd9344d8013689b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 - Parent Entity에서 상속받고 싶은 Entity 선택가능.
 
@@ -1106,7 +1103,7 @@ iOS에서 `Window`는 다른 뷰들을 담는 빈 컨테이너로 동작하며, 
 
 ### NSPersistentContainer
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ef55c8ee-f5db-4189-a4e2-55884e5c56fc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210924%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210924T031924Z&X-Amz-Expires=86400&X-Amz-Signature=cf596daa9635ae90d3192e2fea9f6a8e0969bb6574f92658abbe001d11379a0b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ef55c8ee-f5db-4189-a4e2-55884e5c56fc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T054310Z&X-Amz-Expires=86400&X-Amz-Signature=aa48c9e7af4e58a5f96f261de03c09ef95eff5a453aabae7dcc0e3b72300bcc9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 - Persistent Container는 그림과 같이 Model Context, Store Coordinator, Model이 포함되어있음.
 - Manage and persist your app’s model layer.
