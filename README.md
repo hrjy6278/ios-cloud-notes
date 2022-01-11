@@ -398,7 +398,7 @@ static func generateAlertController(title: String?, message: String?, style: UIA
 ### 테이블뷰에서 뷰들이 한곳에 모여있는 에러
 
 ####  원인
-![테이블뷰에러](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a3e3b34c-8cdb-4ab8-a04a-dbe1af46fe00/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T052749Z&X-Amz-Expires=86400&X-Amz-Signature=92695e9cde66ca9a8279541a9cfa229d50f6314f7695a48bc50aea4658bdf476&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![[테이블뷰에러](https://imgur.com/IvdTBy0.png)
 
 
 저 검은색들이 스택뷰로 ContentView에 addSubView를 한 것인데  저기에 셀이 다 모여있음... 왜그런걸까?
@@ -434,7 +434,7 @@ func configureLables() {
 
 #### 원인
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2aa1b386-48b3-4c0d-8064-f0dd79568846/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T052933Z&X-Amz-Expires=86400&X-Amz-Signature=a1d831946de0e1ffb1e1e0aba62dfc5133b9802d856764971d5cff2242c01ba1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+<img src ="https://imgur.com/skbW7kf.png">
 
 자세히 보면 왼쪽 Line이 이어져있지않음
 
@@ -450,17 +450,17 @@ func configureLables() {
 
 #### 원인
 
-<img src ="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/98f8991e-bd5a-452b-ab41-fbc54906d67f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T052947Z&X-Amz-Expires=86400&X-Amz-Signature=e6660ff08f6efbb5ea0f9403b82f09a7eaa2d082df48be46926f653dfe94e27e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+<img src ="https://imgur.com/GdsLJNd.png">
 
 DateFormatter의 locale을 현재 기기상의 locale로 표현했는데
 
 시뮬레이터에서는 계속 날짜가 영어권으로 나온다..
 
-<img src="hhttps://s3.us-west-2.amazonaws.com/secure.notion-static.com/de357c37-df82-4025-a35c-2a1db29f155f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053002Z&X-Amz-Expires=86400&X-Amz-Signature=42d50fe9e2f73dfc01f714e63e4b28cbba788ba6dc18ba4b4a2108b9ca6959bc&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+<img src="https://imgur.com/gQQ4W82.png">
 
 Locale.current를 print해보면
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c43091b-41b4-4129-949a-3dc0b0d904c5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053015Z&X-Amz-Expires=86400&X-Amz-Signature=4f5462ff6d668c706ed8ea94b090797759a196617d132a36237173dc95175b57&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+<img src="https://imgur.com/brjB4HN.png">
 
 사용하는 언어가 en으로 되어있다.. 시뮬레이터에 아무리 한국어 설정을 해도 저부분이 바뀌지 않는다.
 
@@ -496,7 +496,7 @@ static func localizedString(of lastModifier: Int) -> String {
 ### TextView의 스크롤의 시작부분이 제일 상단이 아닌, 중간쯤에 위치하는 에러
 #### 원인
 
-<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/49a33f6a-3ff3-4ea1-9eaa-bde62bc68604/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053040Z&X-Amz-Expires=86400&X-Amz-Signature=5de3a97b0a5f2610bb8d43bb16b3b9da37a3ed5b264804c0b0eec9e879d2a876&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+<img src = "https://imgur.com/OhQVTnc.png">
 
 <br>
 
@@ -559,7 +559,7 @@ tableview를 상속받아서 그런것인가?
 
 ---
 
-<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/72b1291e-4b4b-469f-b481-48260b75586a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053112Z&X-Amz-Expires=86400&X-Amz-Signature=229e746795f6e6be23c5a15995433e205d0a7a7e433bcbf3f645eff7212f0eed&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject">
+<img src = "https://imgur.com/lMCqKIN.png">
 
 <br>
 <br>
@@ -641,7 +641,7 @@ DispatchQueue.global().async {
 
 #### 원인
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/537668f7-a60b-422d-8b70-5b295f45ef8e/131966577-7928382a-32b6-4ed3-ad1c-266d6a5205f2.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053137Z&X-Amz-Expires=86400&X-Amz-Signature=ab0bc089ddf7017b792a2780ee57edb1052517e7d72dd8359f30e11c3d068d48&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22131966577-7928382a-32b6-4ed3-ad1c-266d6a5205f2.gif%22&x-id=GetObject">
+<img src="https://imgur.com/C5MYtq8.gif">
 <br>
 <br>
 
@@ -763,7 +763,7 @@ dataSource = MemoSourceData(tableView: self.tableView, cellProvider: { tableView
 
 ### 메모의 내용 수정시, 메모리스트에 수정된 내역이 반영이 안되는 에러
 #### 원인
-<img src = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f744ef83-ec87-4dcd-8e61-3ec97569e789/Simulator_Screen_Recording_-_iPhone_12_Pro_Max_-_2021-09-07_at_15.40.32.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211127%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211127T053159Z&X-Amz-Expires=86400&X-Amz-Signature=5c2b9741093fa762f6aefe664dd1367b4f32a112ed5c6f30ee66577decd1d7ca&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Simulator%2520Screen%2520Recording%2520-%2520iPhone%252012%2520Pro%2520Max%2520-%25202021-09-07%2520at%252015.40.32.gif%22&x-id=GetObject">
+<img src = "https://imgur.com/3SXbwMV.gif">
 
 위 영상과 같이, 메모를 수정하고 나서 `List` 로 돌아갔을때  내용이 바뀌지 않는 증상이 발생함. 하지만 메모의 내용을 눌렀을때 `DetailVC` 에서는 반영이 되어 있음.
 
