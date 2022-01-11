@@ -398,7 +398,7 @@ static func generateAlertController(title: String?, message: String?, style: UIA
 ### 테이블뷰에서 뷰들이 한곳에 모여있는 에러
 
 ####  원인
-![[테이블뷰에러](https://imgur.com/IvdTBy0.png)
+<img src ="https://imgur.com/IvdTBy0.png">
 
 
 저 검은색들이 스택뷰로 ContentView에 addSubView를 한 것인데  저기에 셀이 다 모여있음... 왜그런걸까?
